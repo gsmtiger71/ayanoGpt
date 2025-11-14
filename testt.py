@@ -16,8 +16,8 @@ from aiogram.fsm.storage.memory import MemoryStorage
 
 # ================== CONFIG ==================
 
-TELEGRAM_BOT_TOKEN = "8047763413:AAH_RK52s_SpQaPvdQ3ogYYbqzQG5tNyvvA"
-LONGCAT_API_KEY = "ak_1Oz9rp3C96yx9m205m7Vb6Ft7xG0i"
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
+LONGCAT_API_KEY = os.getenv("LONGCAT_API_KEY", "")
 LONGCAT_API_URL = "https://api.longcat.chat/openai/v1/chat/completions"
 
 BOT_CREDIT = "\n\n━━━━━━━━━━━━━━━━━━\nBot Developed by - @DevloperAyano"
@@ -352,3 +352,4 @@ if __name__ == "__main__":
         asyncio.run(main())
     except KeyboardInterrupt:
         save_user_data()
+
